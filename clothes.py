@@ -47,7 +47,11 @@ class Clothes:
        #print("Yahoo says: It is " + yahoo_result['condition']['text'].lower() + " and " + yahoo_result['condition']['temp'] + "C now in your city.")
 
        if weather_com_result['current_conditions']['temperature'] < '0':
-              print('you should wear warm clothes')
+              print('не пощастило. хоча хто зна?)')
+       if weather_com_result['current_conditions']['temperature'] == '0' or weather_com_result['current_conditions']['temperature'] > '0':
+           print('погана погада. загроза простуди. пийте чай')
+       print('forecast:')
+       print(weather_com_result["forecasts"][1]["date"] + "\nhigh temperature:\n" + weather_com_result["forecasts"][2]["high"] + "\nlower temperature\n" + weather_com_result["forecasts"][2]["low"])
 
 
 clothes_result = Clothes('')
