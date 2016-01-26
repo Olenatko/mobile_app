@@ -50,7 +50,7 @@ class Clothes:
               print('не пощастило. хоча хто зна?)')
        if weather_com_result['current_conditions']['temperature'] == '0' or weather_com_result['current_conditions']['temperature'] > '0':
            print('погана погада. загроза простуди. пийте чай')
-       print('forecast:')
+       print('forecast for today:')
        print(weather_com_result["forecasts"][1]["date"] + "\nhigh temperature:\n" + weather_com_result["forecasts"][2]["high"] + "\nlower temperature\n" + weather_com_result["forecasts"][2]["low"])
 
 
